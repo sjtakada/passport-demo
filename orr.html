@@ -4,64 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>オンライン在留届（ORR-net） | 在サンフランシスコ日本国総領事館</title>
-  <style>
-    :root {
-      --bg: #f6f8fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --line: #dbe2ea;
-      --primary: #0f4c81;
-      --primary-2: #1d6fb8;
-      --accent: #eef5fb;
-      --success: #effaf3;
-      --warning: #fff8e8;
-      --shadow: 0 10px 30px rgba(15, 76, 129, 0.08);
-      --radius: 16px;
-      --max: 1120px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--primary-2); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .topbar { background: var(--primary); color: #fff; padding: 14px 20px; }
-    .topbar-inner, .container, .footer { max-width: var(--max); margin: 0 auto; }
-    .brand { font-weight: 700; }
-    .subbrand { font-size: 0.95rem; opacity: 0.9; }
-    .hero { background: linear-gradient(180deg, #f0f6fc 0%, #f6f8fb 100%); border-bottom: 1px solid var(--line); }
-    .hero-inner { max-width: var(--max); margin: 0 auto; padding: 36px 20px 28px; }
-    .eyebrow { display:inline-block; background: var(--accent); color: var(--primary); border:1px solid #d7e6f5; border-radius:999px; padding:6px 12px; font-size:0.9rem; font-weight:600; margin-bottom:12px; }
-    h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 12px; line-height: 1.2; }
-    .lead { font-size: 1.06rem; color: var(--muted); max-width: 760px; margin: 0; }
-    .container { padding: 24px 20px 48px; }
-    .grid { display: grid; gap: 20px; }
-    .grid-2 { grid-template-columns: 1.05fr 0.95fr; }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; }
-    .section-title { margin: 0 0 14px; font-size: 1.35rem; }
-    .small-title { margin: 0 0 10px; font-size: 1.05rem; }
-    .muted { color: var(--muted); }
-    .btn-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
-    .btn { display:inline-block; border-radius:12px; padding:12px 16px; font-weight:700; border:1px solid transparent; }
-    .btn-primary { background: var(--primary); color:#fff; }
-    .btn-secondary { background:#fff; border-color: var(--line); color: var(--text); }
-    .steps { display:grid; gap:14px; }
-    .step { border:1px solid var(--line); border-radius:14px; padding:16px; background:#fbfdff; }
-    .step-num { display:inline-flex; width:34px; height:34px; border-radius:999px; align-items:center; justify-content:center; background: var(--primary); color:#fff; font-weight:700; margin-bottom:10px; }
-    .checklist { list-style:none; padding:0; margin:0; }
-    .checklist li { position:relative; padding-left:28px; margin:10px 0; }
-    .checklist li::before { content:"✓"; position:absolute; left:0; top:0; width:20px; height:20px; border-radius:50%; background: var(--success); color:#1f7a39; display:flex; align-items:center; justify-content:center; border:1px solid #cfe8d6; font-size:0.85rem; font-weight:700; }
-    .callout { border-radius:14px; padding:16px; border:1px solid #f0dfac; background: var(--warning); }
-    .inline-nav { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
-    .pill { border:1px solid var(--line); border-radius:999px; padding:8px 12px; background:#fff; color: var(--text); font-weight:600; }
-    .footer { padding: 0 20px 36px; color: var(--muted); font-size: 0.95rem; }
-    @media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="topbar">
@@ -75,91 +18,84 @@
     <div class="hero-inner">
       <div class="eyebrow">Online Residence Registration</div>
       <h1>オンライン在留届（ORR-net）</h1>
-      <p class="lead">海外に中長期で滞在する日本人向けの在留届について、提出対象・必要情報・提出手順・パスポート申請との関係を一ページで確認できるようにしたサンプルです。</p>
-      <div class="inline-nav">
-        <a class="pill" href="index.html">パスポート申請トップ</a>
-        <a class="pill" href="documents.html">必要書類</a>
-        <a class="pill" href="faq.html">FAQ</a>
-      </div>
+      <p class="lead">海外に中長期で滞在する日本人向けの在留届について、提出対象・必要情報・提出手順・パスポート申請との関係を一ページで確認できるサンプルです。</p>
+
+    <div class="inline-nav">
+      <a class="nav-pill" href="index.html">パスポート申請</a>
+      <a class="nav-pill" href="orr.html">オンライン在留届</a>
+      <a class="nav-pill" href="documents.html">必要書類</a>
+      <a class="nav-pill" href="faq.html">FAQ</a>
+    </div>
+
     </div>
   </section>
 
   <main class="container">
-    <div class="grid grid-2">
-      <section class="card">
-        <h2 class="section-title">在留届とは</h2>
-        <p class="muted">海外に 3 か月以上滞在する場合に、現地の日本大使館・総領事館へ提出する届出です。緊急時の連絡、各種案内、領事サービス利用時の基礎情報として使われます。</p>
-        <ul class="checklist">
-          <li>長期滞在者の連絡先を領事館が把握するための届出</li>
-          <li>オンラインで提出できる仕組みを案内</li>
-          <li>パスポート申請時に関連案内として表示</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#steps">提出手順を見る</a>
-          <a class="btn btn-secondary" href="#passport-link">パスポート申請との関係</a>
-        </div>
-      </section>
 
-      <aside class="card">
-        <h2 class="section-title">このページで分かること</h2>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><strong>提出対象</strong><div class="muted">誰が在留届を出す必要があるか</div></div>
-          <div class="step"><div class="step-num">2</div><strong>必要情報</strong><div class="muted">住所・連絡先・家族情報など</div></div>
-          <div class="step"><div class="step-num">3</div><strong>提出の流れ</strong><div class="muted">ORR-net への入力から完了まで</div></div>
-        </div>
-      </aside>
+<div class="grid grid-2">
+  <section class="card">
+    <h2 class="section-title">在留届とは</h2>
+    <p class="muted">海外に3か月以上滞在する日本人向けの届出です。緊急時の連絡、各種案内、領事サービス利用時の基礎情報として使われます。</p>
+    <ul class="checklist">
+      <li>長期滞在者の連絡先を領事館が把握するための届出</li>
+      <li>オンライン提出の導線をまとめて案内</li>
+      <li>パスポート申請との関係を同じ文脈で理解できる構成</li>
+    </ul>
+  </section>
+
+  <aside class="card">
+    <h2 class="section-title">このページで分かること</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><strong>提出対象</strong><div class="muted">誰が対象か</div></div>
+      <div class="step"><div class="step-num">2</div><strong>必要情報</strong><div class="muted">住所・連絡先・家族情報</div></div>
+      <div class="step"><div class="step-num">3</div><strong>提出の流れ</strong><div class="muted">入力から完了まで</div></div>
     </div>
+  </aside>
+</div>
 
-    <section class="card" style="margin-top:20px;">
-      <h2 class="section-title">提出対象</h2>
-      <ul class="checklist">
-        <li>海外に 3 か月以上滞在予定の方</li>
-        <li>本人だけでなく家族帯同者がいる場合は家族情報も整理</li>
-        <li>転居・帰国・家族構成変更時は内容更新の導線を用意</li>
-      </ul>
-      <div class="callout" style="margin-top:14px;">
-        <strong>設計上のポイント</strong>
-        <div class="muted">制度説明を別PDFに逃がさず、まずこの場所で「自分が対象かどうか」が分かるようにします。</div>
-      </div>
-    </section>
+<section class="grid grid-2" style="margin-top:20px;">
+  <section class="card">
+    <h2 class="section-title">提出対象</h2>
+    <ul class="checklist">
+      <li>海外に3か月以上滞在予定の方</li>
+      <li>帯同家族がいる場合は家族情報も整理</li>
+      <li>転居・帰国・家族構成変更時は内容更新</li>
+    </ul>
+    <div class="callout">
+      <strong>UX上の狙い</strong>
+      <div class="muted">制度説明を別PDFに逃がさず、この場所で「自分が対象か」が分かるようにします。</div>
+    </div>
+  </section>
 
-    <section id="steps" class="grid grid-2" style="margin-top:20px;">
-      <section class="card">
-        <h2 class="section-title">提出手順</h2>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><strong>対象確認</strong><div class="muted">滞在予定期間と住所の見込みを確認</div></div>
-          <div class="step"><div class="step-num">2</div><strong>必要情報を準備</strong><div class="muted">氏名、住所、電話番号、同居家族など</div></div>
-          <div class="step"><div class="step-num">3</div><strong>オンライン提出</strong><div class="muted">ORR-net で入力・送信</div></div>
-          <div class="step"><div class="step-num">4</div><strong>変更時は更新</strong><div class="muted">住所変更や帰国時は内容を修正</div></div>
-        </div>
-      </section>
+  <section class="card">
+    <h2 class="section-title">入力前に用意する情報</h2>
+    <ul class="checklist">
+      <li>氏名、生年月日</li>
+      <li>現地住所、電話番号、メールアドレス</li>
+      <li>滞在予定期間</li>
+      <li>勤務先・学校情報</li>
+      <li>家族の氏名・続柄・生年月日</li>
+    </ul>
+  </section>
+</section>
 
-      <section class="card">
-        <h2 class="section-title">入力前に用意する情報</h2>
-        <ul class="checklist">
-          <li>氏名、生年月日</li>
-          <li>現地住所、電話番号、メールアドレス</li>
-          <li>滞在予定期間</li>
-          <li>勤務先・学校情報（必要に応じて）</li>
-          <li>家族の氏名・続柄・生年月日</li>
-        </ul>
-      </section>
-    </section>
+<section class="card" style="margin-top:20px;">
+  <h2 class="section-title">パスポート申請との関係</h2>
+  <p class="muted">利用者視点では、在留届とパスポート申請は別制度でも、実際には関連事項として並べて見せた方が分かりやすいです。</p>
+  <ul class="checklist">
+    <li>オンライン申請前に在留届の有無を確認</li>
+    <li>対象ならそのまま ORR-net 案内へ進める</li>
+    <li>対象外でも理由を短く説明する</li>
+  </ul>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="index.html">パスポート申請ページへ戻る</a>
+  </div>
+</section>
 
-    <section id="passport-link" class="card" style="margin-top:20px;">
-      <h2 class="section-title">パスポート申請との関係</h2>
-      <p class="muted">ユーザー視点では、在留届とパスポート申請は別制度ではあっても、実際には同じ文脈で必要になることが多いため、相互リンクではなく同一導線で見せるのが分かりやすいです。</p>
-      <ul class="checklist">
-        <li>オンライン申請前に在留届の有無を確認する流れを表示</li>
-        <li>対象ならその場で ORR-net 案内へ進める</li>
-        <li>対象外でも、その理由を短く説明する</li>
-      </ul>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="index.html">パスポート申請ページへ戻る</a>
-      </div>
-    </section>
   </main>
 
-  <footer class="footer">このページは ORR-net を含む在留届案内の改善版サンプルです。実運用時には正式な提出条件・外部リンク・注意事項に差し替えてください。</footer>
+  <footer class="footer">
+    このサンプルサイトは、パスポート申請・在留届・必要書類・FAQ を利用者の行動フローで再整理した GitHub Pages 向けデモです。
+  </footer>
 </body>
 </html>
