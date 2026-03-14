@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>パスポート申請 | 在サンフランシスコ日本国総領事館</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #dbe2ea;
+      --primary: #0f4c81;
+      --primary-2: #1d6fb8;
+      --accent: #eef5fb;
+      --success: #effaf3;
+      --warning: #fff8e8;
+      --shadow: 0 10px 30px rgba(15, 76, 129, 0.08);
+      --radius: 16px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 20px;
+    }
+
+    .topbar-inner,
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .subbrand {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-top: 2px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #f0f6fc 0%, #f6f8fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 40px 20px 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      border: 1px solid #d7e6f5;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .container {
+      padding: 24px 20px 48px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+    }
+
+    .small-title {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .step {
+      background: #f9fbfd;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .step-num {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .case {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .case h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      padding-left: 28px;
+      position: relative;
+      margin: 10px 0;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--success);
+      color: #1f7a39;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 1px solid #cfe8d6;
+    }
+
+    .callout {
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid #f0dfac;
+      background: var(--warning);
+      margin-top: 14px;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .option {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+
+    details:first-of-type { border-top: 0; padding-top: 0; }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px 36px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .note {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2,
+      .steps,
+      .case-grid,
+      .options {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">在サンフランシスコ日本国総領事館</div>
+      <div class="subbrand">Consulate-General of Japan in San Francisco</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Passport Services</div>
+      <h1>パスポート申請</h1>
+      <p class="lead">
+        パスポート申請に必要な情報を、ケース別・手順別にまとめています。PDF を何枚も開かなくても、必要書類・申請方法・受取まで一画面で確認できます。
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="grid grid-2">
+      <section class="card">
+        <h2 class="section-title">まずは申請タイプを選んでください</h2>
+        <div class="case-grid">
+          <article class="case">
+            <div class="badge">更新</div>
+            <h3>有効中のパスポート更新</h3>
+            <p class="muted">氏名や本籍に大きな変更がなく、現在の旅券を更新したい方。</p>
+          </article>
+          <article class="case">
+            <div class="badge">期限切れ</div>
+            <h3>期限切れパスポート</h3>
+            <p class="muted">以前パスポートを持っていたが、すでに有効期限が切れている方。</p>
+          </article>
+          <article class="case">
+            <div class="badge">新規</div>
+            <h3>初めての申請</h3>
+            <p class="muted">初めて日本のパスポートを取得する方。</p>
+          </article>
+          <article class="case">
+            <div class="badge">未成年</div>
+            <h3>子どものパスポート</h3>
+            <p class="muted">未成年者の申請。法定代理人の同意や追加確認が必要な場合があります。</p>
+          </article>
+          <article class="case">
+            <div class="badge">変更</div>
+            <h3>氏名・本籍変更</h3>
+            <p class="muted">婚姻や転籍などで旅券記載事項に変更がある方。</p>
+          </article>
+          <article class="case">
+            <div class="badge">紛失</div>
+            <h3>紛失・盗難</h3>
+            <p class="muted">パスポートをなくした方。失効手続きと新規申請が必要です。</p>
+          </article>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#expired">例：期限切れパスポートの手続きを見る</a>
+          <a class="btn btn-secondary" href="#faq">よくある質問</a>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">申請の流れ</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <strong>必要書類を確認</strong>
+            <div class="muted">自分のケースに応じた書類を準備します。</div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <strong>申請方法を選ぶ</strong>
+            <div class="muted">オンライン申請または窓口申請の条件を確認します。</div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <strong>受取</strong>
+            <div class="muted">審査完了後、受取方法と注意事項を確認します。</div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>このページの考え方</strong>
+          <p class="note" style="margin:8px 0 0;">
+            詳細PDFは補助資料として残しつつ、まずは Web ページ上で全体像が理解できる構成にしています。
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <section id="expired" class="card" style="margin-top:20px;">
+      <h2 class="section-title">ケース別ガイド：期限切れパスポート</h2>
+      <p class="muted">以前日本のパスポートを所持していたが、現在は期限切れになっている方向けの例です。</p>
+
+      <div class="grid" style="gap:18px; margin-top:16px;">
+        <div>
+          <h3 class="small-title">STEP 1 必要書類</h3>
+          <ul class="checklist">
+            <li>一般旅券発給申請書</li>
+            <li>戸籍謄本（発行から 6 か月以内）</li>
+            <li>写真 1 枚（規格に適合するもの）</li>
+            <li>期限切れの日本パスポート</li>
+            <li>滞在資格や住所確認に関する書類（必要に応じて）</li>
+          </ul>
+          <div class="callout">
+            <strong>補足</strong>
+            <p class="note" style="margin:8px 0 0;">
+              戸籍謄本の要否や追加書類は、氏名変更・未成年・二重国籍関連などの条件で変わる場合があります。
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="small-title">STEP 2 申請方法</h3>
+          <div class="options">
+            <div class="option">
+              <h4 style="margin:0 0 8px;">オンライン申請</h4>
+              <p class="muted">対象条件を満たす場合に利用。本人確認や必要データの提出要件あり。</p>
+              <ul class="checklist">
+                <li>利用条件を満たしているか確認</li>
+                <li>案内に従って情報入力</li>
+                <li>必要書類をアップロードまたは別途提出</li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn btn-secondary" href="#">オンライン申請条件を見る</a>
+              </div>
+            </div>
+            <div class="option">
+              <h4 style="margin:0 0 8px;">窓口申請</h4>
+              <p class="muted">領事館で申請する標準的な方法。予約の要否や受付時間を明記。</p>
+              <ul class="checklist">
+                <li>必要書類を持参</li>
+                <li>予約システムまたは受付情報を確認</li>
+                <li>窓口で申請後、受取日を確認</li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn btn-secondary" href="#">予約・受付案内を見る</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="small-title">STEP 3 受取</h3>
+          <ul class="checklist">
+            <li>審査完了後、受取可能日を確認</li>
+            <li>受取時に本人確認書類や旧旅券が必要な場合あり</li>
+            <li>代理受領や郵送可否はケースごとに明記</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-2" style="margin-top:20px;">
+      <section class="card">
+        <h2 class="section-title">必要書類の詳細</h2>
+        <details open>
+          <summary>戸籍謄本について</summary>
+          <p class="muted">発行から 6 か月以内のものを求める旨を明確に表示。取得方法も簡潔に案内します。</p>
+          <ul>
+            <li>本籍地の市区町村から取得</li>
+            <li>代理取得の可否</li>
+            <li>オンライン連携が使えるケースの説明</li>
+          </ul>
+        </details>
+        <details>
+          <summary>写真の規格</summary>
+          <p class="muted">サイズ、背景、顔の向き、撮影時期などを図付きで掲載できる構成。</p>
+        </details>
+        <details>
+          <summary>未成年者・二重国籍の補足</summary>
+          <p class="muted">同意書、追加確認、国籍関係の案内を分かりやすく分離します。</p>
+        </details>
+      </section>
+
+      <section class="card" id="faq">
+        <h2 class="section-title">よくある質問</h2>
+        <details open>
+          <summary>戸籍はコピーでもいいですか？</summary>
+          <p class="muted">原本が必要な場合は、その旨を明確に表示します。</p>
+        </details>
+        <details>
+          <summary>期限切れパスポートでも更新扱いですか？</summary>
+          <p class="muted">状況によっては新規申請に近い扱いになることがあるため、ケース別に整理します。</p>
+        </details>
+        <details>
+          <summary>オンライン申請は誰でも使えますか？</summary>
+          <p class="muted">対象条件、必要な本人確認手段、注意点をここで簡潔に示します。</p>
+        </details>
+        <details>
+          <summary>受取は郵送できますか？</summary>
+          <p class="muted">可否や条件をこの場所で確認できるようにします。</p>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    このサンプルは、PDF中心ではなく Webページ上で情報を完結させることを目的にした改善版ワイヤーフレームです。実運用時には実際の要件、受付時間、申請条件、予約導線に合わせて文言を差し替えてください。
+  </footer>
+</body>
+</html>
